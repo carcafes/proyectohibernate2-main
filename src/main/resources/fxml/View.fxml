@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<TabPane fx:id="view" prefHeight="722.0" prefWidth="1096.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <tabs>
+      <Tab fx:id="Habitacion" text="Habitaciones">
+         <content>
+            <BorderPane prefHeight="480.0" prefWidth="640.0">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <center>
+                  <TableView fx:id="table1" editable="true" prefHeight="502.0" prefWidth="1048.0" BorderPane.alignment="CENTER">
+                     <columns>
+                        <TableColumn fx:id="codigoColumn1" prefWidth="161.0" text="Codigo de la habitacion" />
+                        <TableColumn fx:id="hotelColumn1" prefWidth="146.0" text="Hotel" />
+                        <TableColumn fx:id="numeroColumn1" prefWidth="138.0" text="Numero de Habitacion" />
+                        <TableColumn fx:id="capacidadColumn1" prefWidth="75.0" text="Capacidad" />
+                        <TableColumn fx:id="activaColumn1" prefWidth="75.0" text="Activa" />
+                        <TableColumn fx:id="precioColumn1" prefWidth="96.0" text="Precio por dia" />
+                        <TableColumn fx:id="observacionesColumn1" prefWidth="355.0" text="Observaciones" />
+                     </columns>
+                  </TableView>
+               </center>
+               <bottom>
+                  <HBox prefHeight="98.0" prefWidth="1086.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <TextField fx:id="codHoteltext1" layoutX="10.0" layoutY="10.0" prefHeight="25.0" prefWidth="115.0" promptText="codHotel">
+                           <HBox.margin>
+                              <Insets left="5.0" top="40.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <TextField fx:id="nomHoteltext1" layoutX="511.0" layoutY="50.0" prefHeight="25.0" prefWidth="107.0" promptText="nomHotel">
+                           <HBox.margin>
+                              <Insets left="5.0" top="40.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <TextField fx:id="numHabtext1" layoutX="167.0" layoutY="10.0" prefHeight="25.0" prefWidth="117.0" promptText="numhabitacion">
+                           <HBox.margin>
+                              <Insets left="5.0" top="40.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <TextField fx:id="capacidadtext1" layoutX="403.0" layoutY="10.0" prefHeight="25.0" prefWidth="100.0" promptText="capacidad">
+                           <HBox.margin>
+                              <Insets left="5.0" top="40.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <TextField fx:id="preciodiatext1" layoutX="421.0" layoutY="10.0" prefHeight="25.0" prefWidth="92.0" promptText="preciodia">
+                           <HBox.margin>
+                              <Insets left="5.0" top="40.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <Label text="Activa:">
+                           <HBox.margin>
+                              <Insets left="5.0" top="45.0" />
+                           </HBox.margin>
+                        </Label>
+                        <CheckBox fx:id="activabox" mnemonicParsing="false">
+                           <HBox.margin>
+                              <Insets left="5.0" top="45.0" />
+                           </HBox.margin>
+                        </CheckBox>
+                        <TextArea fx:id="observacionestext1" prefHeight="98.0" prefWidth="228.0" promptText="observaciones">
+                           <padding>
+                              <Insets left="5.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets left="5.0" />
+                           </HBox.margin>
+                        </TextArea>
+                        <Button fx:id="crearbutton1" mnemonicParsing="false" onAction="#onClickCrear1" text="Crear">
+                           <HBox.margin>
+                              <Insets left="15.0" top="40.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="borrarbutton1" layoutX="304.0" layoutY="10.0" mnemonicParsing="false" onAction="#onClickBorrar1" text="Borrar">
+                           <HBox.margin>
+                              <Insets left="5.0" top="40.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="cargarbutton1" layoutX="925.0" layoutY="50.0" mnemonicParsing="false" onAction="#onClickCargar1" text="Cargar">
+                           <HBox.margin>
+                              <Insets left="5.0" top="40.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="updatebutton1" layoutX="984.0" layoutY="50.0" mnemonicParsing="false" onAction="#onClickUpdate1" text="Update">
+                           <HBox.margin>
+                              <Insets left="5.0" top="40.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                     <BorderPane.margin>
+                        <Insets top="10.0" />
+                     </BorderPane.margin>
+                  </HBox>
+               </bottom>
+            </BorderPane>
+         </content>
+      </Tab>
+      <Tab fx:id="Estancias" text="Estancias">
+         <content>
+            <BorderPane prefHeight="480.0" prefWidth="640.0">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <top>
+                  <HBox prefHeight="30.0" prefWidth="1048.0" BorderPane.alignment="CENTER" />
+               </top>
+               <left>
+                  <HBox prefHeight="105.0" prefWidth="1086.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <VBox alignment="TOP_RIGHT" prefHeight="643.0" prefWidth="355.0">
+                           <children>
+                              <HBox alignment="TOP_RIGHT">
+                                 <children>
+                                    <Label text="DNI:">
+                                       <HBox.margin>
+                                          <Insets left="5.0" right="5.0" top="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <TextField fx:id="codDni" prefHeight="25.0" prefWidth="91.0" promptText="coddnionie" />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="15.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox alignment="TOP_RIGHT">
+                                 <children>
+                                    <Label text="Codigo de Habitacion:">
+                                       <HBox.margin>
+                                          <Insets left="5.0" right="5.0" top="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <TextField fx:id="codHabitacion" prefHeight="25.0" prefWidth="105.0" promptText="codhabitacion" />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="15.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox alignment="TOP_RIGHT">
+                                 <children>
+                                    <Label text="Fecha Inicio:">
+                                       <HBox.margin>
+                                          <Insets left="5.0" right="5.0" top="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <TextField fx:id="fechaInicio" prefHeight="25.0" prefWidth="96.0" promptText="yyyy-mm-dd" />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="15.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox alignment="TOP_RIGHT">
+                                 <children>
+                                    <Label text="Fecha fin:">
+                                       <HBox.margin>
+                                          <Insets left="5.0" right="5.0" top="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <TextField fx:id="fechaFin" prefHeight="25.0" prefWidth="91.0" promptText="yyyy-mm-dd" />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="15.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox alignment="TOP_RIGHT">
+                                 <children>
+                                    <Label text="Codigo del regimen">
+                                       <HBox.margin>
+                                          <Insets left="5.0" right="5.0" top="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <TextField fx:id="codRegimen" prefHeight="25.0" prefWidth="87.0" promptText="codRegimen" />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="15.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox alignment="TOP_RIGHT" layoutX="10.0" layoutY="210.0">
+                                 <children>
+                                    <Label text="Ocupantes">
+                                       <HBox.margin>
+                                          <Insets left="5.0" right="5.0" top="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <TextField fx:id="ocupantes" prefHeight="25.0" prefWidth="94.0" promptText="ocupantes" />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="15.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox alignment="TOP_RIGHT" layoutX="10.0" layoutY="250.0">
+                                 <children>
+                                    <Label text="Precio de la estancia">
+                                       <HBox.margin>
+                                          <Insets left="5.0" right="5.0" top="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <TextField fx:id="precioEstancia" prefHeight="25.0" prefWidth="219.0" promptText="precioEstancia" />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="15.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox alignment="TOP_RIGHT" layoutX="10.0" layoutY="275.0">
+                                 <children>
+                                    <Label text="Pagado:">
+                                       <HBox.margin>
+                                          <Insets left="5.0" right="5.0" top="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <CheckBox mnemonicParsing="false">
+                                       <HBox.margin>
+                                          <Insets top="5.0" />
+                                       </HBox.margin>
+                                    </CheckBox>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="15.0" />
+                                 </VBox.margin>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="643.0" prefWidth="508.0">
+                           <HBox.margin>
+                              <Insets left="15.0" />
+                           </HBox.margin>
+                           <children>
+                              <Button fx:id="crearbutton2" mnemonicParsing="false" onAction="#onClickCrear2" prefHeight="55.0" prefWidth="250.0" text="Crear" />
+                           </children>
+                        </HBox>
+                     </children>
+                     <BorderPane.margin>
+                        <Insets top="10.0" />
+                     </BorderPane.margin>
+                  </HBox>
+               </left>
+            </BorderPane>
+         </content>
+      </Tab>
+      <Tab fx:id="Estancias1" text="Regimenes">
+         <content>
+            <BorderPane prefHeight="480.0" prefWidth="640.0">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <top>
+                  <HBox prefHeight="30.0" prefWidth="1048.0" BorderPane.alignment="CENTER" />
+               </top>
+               <left>
+                  <HBox prefHeight="105.0" prefWidth="1086.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <VBox prefHeight="643.0" prefWidth="355.0">
+                           <children>
+                              <HBox alignment="TOP_RIGHT">
+                                 <children>
+                                    <Label text="Codigo del Hotel">
+                                       <HBox.margin>
+                                          <Insets left="5.0" right="5.0" top="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <TextField fx:id="codHotel2" prefHeight="25.0" prefWidth="87.0" promptText="codHotel" />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="15.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox alignment="TOP_RIGHT">
+                                 <children>
+                                    <Label text="Tipo:">
+                                       <HBox.margin>
+                                          <Insets left="5.0" right="5.0" top="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <ComboBox fx:id="comboDietas" prefWidth="150.0" />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="15.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox alignment="TOP_RIGHT" layoutX="10.0" layoutY="250.0">
+                                 <children>
+                                    <Label text="Precio por dia">
+                                       <HBox.margin>
+                                          <Insets left="5.0" right="5.0" top="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <TextField fx:id="preciodiatext2" prefHeight="25.0" prefWidth="219.0" promptText="precioDia" />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="15.0" />
+                                 </VBox.margin>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="643.0" prefWidth="508.0">
+                           <HBox.margin>
+                              <Insets left="15.0" />
+                           </HBox.margin>
+                           <children>
+                              <Button fx:id="crearbutton3" mnemonicParsing="false" onAction="#onClickCrear3" prefHeight="55.0" prefWidth="250.0" text="Crear" />
+                           </children>
+                        </HBox>
+                     </children>
+                     <BorderPane.margin>
+                        <Insets top="10.0" />
+                     </BorderPane.margin>
+                  </HBox>
+               </left>
+            </BorderPane>
+         </content>
+      </Tab>
+      <Tab fx:id="Estancias11" text="Clientes">
+         <content>
+            <BorderPane prefHeight="480.0" prefWidth="640.0">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <top>
+                  <HBox prefHeight="30.0" prefWidth="1048.0" BorderPane.alignment="CENTER" />
+               </top>
+               <left>
+                  <HBox prefHeight="105.0" prefWidth="1086.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <VBox prefHeight="643.0" prefWidth="355.0">
+                           <children>
+                              <HBox alignment="TOP_RIGHT">
+                                 <children>
+                                    <Label text="Codigo del dni o nie">
+                                       <HBox.margin>
+                                          <Insets left="5.0" right="5.0" top="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <TextField fx:id="codDni5" prefHeight="25.0" prefWidth="87.0" promptText="DNI o NIE" />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="15.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox alignment="TOP_RIGHT">
+                                 <children>
+                                    <Label text="Nombre del Cliente">
+                                       <HBox.margin>
+                                          <Insets left="5.0" right="5.0" top="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <TextField fx:id="nombre" prefHeight="25.0" prefWidth="87.0" promptText="nomCliente" />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="15.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox alignment="TOP_RIGHT" layoutX="10.0" layoutY="50.0">
+                                 <children>
+                                    <Label text="Nacionalidad del Cliente">
+                                       <HBox.margin>
+                                          <Insets left="5.0" right="5.0" top="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <TextField fx:id="nacionalidad" prefHeight="25.0" prefWidth="87.0" promptText="nacionalidad" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="643.0" prefWidth="508.0">
+                           <HBox.margin>
+                              <Insets left="15.0" />
+                           </HBox.margin>
+                           <children>
+                              <Button fx:id="crearbutton5" mnemonicParsing="false" onAction="#onClickCrear5" prefHeight="55.0" prefWidth="250.0" text="Crear" />
+                           </children>
+                        </HBox>
+                     </children>
+                     <BorderPane.margin>
+                        <Insets top="10.0" />
+                     </BorderPane.margin>
+                  </HBox>
+               </left>
+            </BorderPane>
+         </content>
+      </Tab>
+      <Tab fx:id="Estancias111" text="Hoteles">
+         <content>
+            <BorderPane prefHeight="480.0" prefWidth="640.0">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <top>
+                  <HBox prefHeight="30.0" prefWidth="1048.0" BorderPane.alignment="CENTER" />
+               </top>
+               <left>
+                  <HBox prefHeight="105.0" prefWidth="1086.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <VBox prefHeight="643.0" prefWidth="355.0">
+                           <children>
+                              <HBox alignment="TOP_RIGHT">
+                                 <children>
+                                    <Label text="Codigo del Hotel">
+                                       <HBox.margin>
+                                          <Insets left="5.0" right="5.0" top="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <TextField fx:id="codHotel4" prefHeight="25.0" prefWidth="87.0" promptText="codHotel" />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets bottom="15.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <HBox alignment="TOP_RIGHT">
+                                 <children>
+                                    <Label text="Nombre del Hotel">
+                                       <HBox.margin>
+                                          <Insets left="5.0" right="5.0" top="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <TextField fx:id="nomHotel4" prefHeight="25.0" prefWidth="87.0" promptText="nomHotel" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="643.0" prefWidth="508.0">
+                           <HBox.margin>
+                              <Insets left="15.0" />
+                           </HBox.margin>
+                           <children>
+                              <Button fx:id="crearbutton4" mnemonicParsing="false" onAction="#onClickCrear4" prefHeight="55.0" prefWidth="250.0" text="Crear" />
+                           </children>
+                        </HBox>
+                     </children>
+                     <BorderPane.margin>
+                        <Insets top="10.0" />
+                     </BorderPane.margin>
+                  </HBox>
+               </left>
+            </BorderPane>
+         </content>
+      </Tab>
+   </tabs>
+</TabPane>
